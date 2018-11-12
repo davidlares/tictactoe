@@ -8,3 +8,6 @@ if __name__ == "__main__":
     while True:
         # Get X input
         x = int(input("\n X turn - Please choose [1 - 9]: "))
+        board.set_choice(x,"X")
+
+        # Get O input (AI Intended)
