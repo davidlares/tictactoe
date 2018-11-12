@@ -17,3 +17,7 @@ if __name__ == "__main__":
         # Get O input (AI Intended)
         board.opponent_move("O") # default AI player
         board.wipe_screen() # showing "realtime results"
+
+        if board.is_winner("O"):
+            print("\n Congrats! O Player Wins! \n")
+            break

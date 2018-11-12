@@ -14,6 +14,12 @@ class TestBoard(unittest.TestCase):
     def tearDown(self):
         pass
 
+    # dummy filling X first row
+    def filling_test_win(self):
+        self.board.board.insert(1,"X")
+        self.board.board.insert(2,"X")
+        self.board.board.insert(3,"X")
+
     def test_board_length(self):
         self.assertEqual(len(self.board.board), 10)
 
@@ -27,5 +33,14 @@ class TestBoard(unittest.TestCase):
     def test_setting_choice(self):
         self.assertTrue(self.board.set_choice(self.random_number, self.default_player))
 
+    # some winning case
+    def test_winning_move(self):
+        self.filling_test_win()
+        for comb in [1,2,3]:
+            if self.board.board[comb] == self.default_player:
+                self.assertTrue(True, True)
+            else:
+                self.fail("At least one of the selection is empty or wrong")
+                
 if __name__ == "__main__":
     unittest.main() # execute all unittest
