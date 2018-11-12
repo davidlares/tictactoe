@@ -1,5 +1,6 @@
 import os
 import time
+import random
 
 class Board():
     def __init__(self):
@@ -31,3 +32,12 @@ class Board():
             time.sleep(3) # delaying response for watching messages
             return False
         return True
+
+    def opponent_move(self, player):
+        rand = random.randint(1,9)
+        if self.validate_cell(rand):
+            self.set_choice(rand, player)
+        else:
+            print(" AI picked a cell already took. Missing turn. Please wait \n")
+            time.sleep(3) # delaying response for watching messages
+            return False

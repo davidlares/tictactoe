@@ -11,3 +11,5 @@ if __name__ == "__main__":
         board.set_choice(x,"X")
 
         # Get O input (AI Intended)
+        board.opponent_move("O") # default AI player
+        board.wipe_screen() # showing "realtime results"

@@ -17,6 +17,10 @@ class TestBoard(unittest.TestCase):
     def test_board_length(self):
         self.assertEqual(len(self.board.board), 10)
 
+    def test_validate_is_not_empty_cell(self):
+        rand = random.randint(1,self.random_number)
+        self.assertTrue(self.board.validate_cell(rand), True)
+
     def test_show_board(self):
         self.assertNotEqual(self.board.show_board(), False)
 
