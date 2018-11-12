@@ -11,6 +11,7 @@ if __name__ == "__main__":
         board.set_choice(x,"X")
 
         if board.is_winner("X"):
+            board.wipe_screen() # for showing final results
             print("\n Congrats! X Player Wins! \n")
             break
 
@@ -19,5 +20,6 @@ if __name__ == "__main__":
         board.wipe_screen() # showing "realtime results"
 
         if board.is_winner("O"):
+            board.wipe_screen() # for showing final results
             print("\n Congrats! O Player Wins! \n")
             break
