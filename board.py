@@ -41,3 +41,14 @@ class Board():
             print(" AI picked a cell already took. Missing turn. Please wait \n")
             time.sleep(3) # delaying response for watching messages
             return False
+
+    def is_winner(self, player):
+        #range of available combinations of winning = 8 in total
+      for options in [[1,2,3],[4,5,6],[7,8,9],[1,4,7],[2,5,8],[3,6,9],[1,5,9],[3,5,7]]:
+          result = True
+          for cell in options:
+              if self.board[cell] != player:
+                  result = False
+          if result == True:
+              return True
+      return False
