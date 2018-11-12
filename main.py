@@ -8,6 +8,11 @@ if __name__ == "__main__":
     while True:
         # Get X input
         x = int(input("\n X turn - Please choose [1 - 9]: "))
+        
+        if x >= 10 or x < 1:
+            print("Invalid Number, exiting \n")
+            break
+
         board.set_choice(x,"X")
 
         if board.is_winner("X"):
