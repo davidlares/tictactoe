@@ -15,8 +15,7 @@ con la instalacion de python y su versión acorde.
 - Unittest: Libreria o framework para pruebas unitarias en Python
 
 ## Créditos
-- [David E Lares S](https://twitter.com/@davidlares3)
+[David E Lares S](https://davidlares.com)
 
 ## Licencia
-
-- [MIT](https://opensource.org/licenses/MIT)
+[MIT](https://opensource.org/licenses/MIT)
